@@ -21,7 +21,7 @@ datasets: DefaultDict[PublicKey, Deque[Measurement]] = defaultdict(lambda: deque
 dataset_pass: Dict[PublicKey, Password] = {}
 
 
-@routes.post('/measurement')
+@routes.post('/measurements')
 async def get_measurements(req: web.Request):
 	# set - dataset public keys, newer_than (optional) - min ts for measurements
 	data = await req.post()
